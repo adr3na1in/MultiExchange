@@ -130,6 +130,8 @@ extension ESView: IESView {
     //        self.secondCurrency.changeBorderColor()
     //    }
     
+    
+    
     //    func borderColorCash() {
     //        self.amountCash.borderColor()
     //    }
