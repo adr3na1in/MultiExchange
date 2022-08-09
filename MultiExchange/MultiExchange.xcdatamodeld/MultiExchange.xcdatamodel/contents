@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
+    <entity name="PickedCurrencyCore" representedClassName=".PickedCurrencyCore" syncable="YES">
+        <attribute name="currencName" optional="YES" attributeType="String"/>
+        <attribute name="currencyCode" optional="YES" attributeType="String"/>
+        <attribute name="fieldType" optional="YES" attributeType="String"/>
+        <attribute name="repeatCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Entity" positionX="243.890625" positionY="20.5625" width="128" height="29"/>
+        <element name="PickedCurrencyCore" positionX="-78.8125" positionY="6.90234375" width="128" height="89"/>
+    </elements>
+</model>
