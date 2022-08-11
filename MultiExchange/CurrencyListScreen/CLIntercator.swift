@@ -14,7 +14,6 @@ final class CLInteractor {
 }
 
 extension CLInteractor: ICLInteractor {
-    // TODO: фрматировать 2 таблицы списками избранных
     func loadCurList(text: String,
                      pickedField: CurrencyComponent,
                      completion: @escaping (([Currency]) -> Void)) {

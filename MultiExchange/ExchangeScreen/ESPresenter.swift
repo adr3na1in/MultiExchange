@@ -45,14 +45,14 @@ private extension ESPresenter {
             router.goToNextScreen(for: .first, setCurrencyHandler, goToNextScreenHandler)
         }
 
-        self.ui?.setTapHandler(for: .second) { [weak self] in
-            let setCurrencyHandler: ((Currency) -> Void) = { [weak self] currency in
-                self?.ui?.set(.second, currency)
+        self.ui?.setTapHandler(for: .second) { [router, ui, vc] in
+            let setCurrencyHandler: ((Currency) -> Void) = { [ui] currency in
+                ui?.set(.second, currency)
             }
-            let goToNextScreenHandler: ((UIViewController) -> Void) = { [weak self] screen in
-                self?.vc?.forward(to: screen)
+            let goToNextScreenHandler: ((UIViewController) -> Void) = { [vc] screen in
+                vc?.forward(to: screen)
             }
-            self?.router.goToNextScreen(for: .second, setCurrencyHandler, goToNextScreenHandler)
+            router.goToNextScreen(for: .second, setCurrencyHandler, goToNextScreenHandler)
         }
 
     }
