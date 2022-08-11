@@ -110,13 +110,13 @@ extension ESView: IESView {
     }
     
     func set(_ result: Double) {
-        if result > 1 && result < 100 {
+        if result >= 1 && result < 100 {
             self.resultConvers.text = "  \(NSString(format: "%.3f", result))    "
         }
-        if result > 0 && result < 1 {
+        if result >= 0 && result < 1 {
             self.resultConvers.text = "  \(NSString(format: "%.5f", result))    "
         }
-        if result > 100 {
+        if result >= 100 {
             self.resultConvers.text = "  \(NSString(format: "%.2f", result))    "
         }
         
