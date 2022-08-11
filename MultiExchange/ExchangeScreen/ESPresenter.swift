@@ -35,14 +35,14 @@ private extension ESPresenter {
 
     func hookUi() {
 
-        self.ui?.setTapHandler(for: .first) { [weak self] in
-            let setCurrencyHandler: ((Currency) -> Void) = { [weak self] currency in
-                self?.ui?.set(.first, currency)
+        self.ui?.setTapHandler(for: .first) { [router, ui, vc] in
+            let setCurrencyHandler: ((Currency) -> Void) = { [ui] currency in
+                ui?.set(.first, currency)
             }
-            let goToNextScreenHandler: ((UIViewController) -> Void) = { [weak self] screen in
-                self?.vc?.forward(to: screen)
+            let goToNextScreenHandler: ((UIViewController) -> Void) = { [vc] screen in
+                vc?.forward(to: screen)
             }
-            self?.router.goToNextScreen(for: .first, setCurrencyHandler, goToNextScreenHandler)
+            router.goToNextScreen(for: .first, setCurrencyHandler, goToNextScreenHandler)
         }
 
         self.ui?.setTapHandler(for: .second) { [weak self] in
@@ -69,32 +69,12 @@ private extension ESPresenter {
             self.solveResultIfCan()
         }
     }
-    // TODO: изменить цвет рамок при пустом поле
-    func highlightIfNeeded() {
-        if self.fstDelegat.cur == nil {
-            print("left")
-//            self.ui?.borderColorLeft()
-        }
-        if self.scdDelegat.cur == nil {
-            print("right")
-//            self.ui?.borderColorRight()
-
-        }
-        if self.cashDelegat.cash == nil {
-            print("cash")
-            
-//            self.ui?.borderColorCash()
-        }
-    }
 
     func solveResultIfCan() {
         guard let curLeft = self.fstDelegat.cur,
               let curRight = self.scdDelegat.cur,
               let sum = self.cashDelegat.cash
-        else {
-            self.highlightIfNeeded()
-            return
-        }
+        else { return }
 
         self.interactor.solveResult(
             from: curLeft,

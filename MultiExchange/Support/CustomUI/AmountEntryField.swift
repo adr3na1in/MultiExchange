@@ -68,8 +68,4 @@ extension AmountEntryField: UITextFieldDelegate {
             self.delegate?.cashDidSet(0)
         }
     }
-    
-//    func borderColor() {
-//        self.amountCash.layer.borderColor = ColorPalette.neonCyan.cgColor
-//    }
 }

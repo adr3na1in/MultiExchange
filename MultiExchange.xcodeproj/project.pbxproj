@@ -271,8 +271,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 324F0038285CBE7E0017719C /* Build configuration list for PBXNativeTarget "MultiExchange" */;
 			buildPhases = (
-				325A8EEE28A29C0300A5630F /* ShellScript */,
 				CA88C07ACCD108D5097E5E89 /* [CP] Check Pods Manifest.lock */,
+				325A8EEE28A29C0300A5630F /* ShellScript */,
 				324F001D285CBE7B0017719C /* Sources */,
 				324F001E285CBE7B0017719C /* Frameworks */,
 				324F001F285CBE7B0017719C /* Resources */,
@@ -351,8 +351,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 		98CE4E918EFCFA938D3A263E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

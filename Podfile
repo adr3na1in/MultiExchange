@@ -8,5 +8,5 @@ target 'MultiExchange' do
   # Pods for MultiExchange
 pod 'SnapKit'
 pod 'Alamofire'
-pod 'SwiftLint'
+
 end

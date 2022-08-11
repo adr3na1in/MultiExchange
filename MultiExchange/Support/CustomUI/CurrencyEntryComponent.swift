@@ -47,8 +47,4 @@ extension CurrencyEntryComponent {
         self.label.layer.borderColor = ColorPalette.neonCyan.cgColor
         self.delegate?.curDidSet(currency)
     }
-    
-//    func changeBorderColor() {
-//        self.label.layer.borderColor = ColorPalette.neonCyan.cgColor
-//    }
 }

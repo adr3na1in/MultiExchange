@@ -119,22 +119,7 @@ extension ESView: IESView {
         if result >= 100 {
             self.resultConvers.text = "  \(NSString(format: "%.2f", result))    "
         }
-        
     }
-    
-    //    func borderColorLeft() {
-    //            self.firstCurrency.changeBorderColor()
-    //    }
-    //
-    //    func borderColorRight() {
-    //        self.secondCurrency.changeBorderColor()
-    //    }
-    
-    
-    
-    //    func borderColorCash() {
-    //        self.amountCash.borderColor()
-    //    }
 }
 
 private extension ESView {
