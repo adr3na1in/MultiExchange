@@ -43,8 +43,8 @@ private extension AmountEntryField {
     func configView() {
         self.addSubview(self.amountCash)
         self.amountCash.addSubview(self.textAmount)
-        self.tapHandler = { [weak self] in
-            self?.textAmount.becomeFirstResponder()
+        self.tapHandler = { [textAmount] in
+            textAmount.becomeFirstResponder()
         }
     }
 
